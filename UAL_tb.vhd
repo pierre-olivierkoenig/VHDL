@@ -13,7 +13,7 @@ architecture BENCH of UAL_TB is
 	signal OP   : std_logic_vector (1 downto 0);
 	signal N    : std_logic;
 	signal Y    : std_logic_vector(31 downto 0);
-	
+
 begin
 	process
 	begin
@@ -44,12 +44,12 @@ begin
 						end if;
 					end if;
 				end loop;
-			end loop;	
-		end loop;		
+			end loop;
+		end loop;
 		report "End of test. Verify that no error was reported.";
 		wait;
 	end process;
-	
+
 UUT : entity work.UAL
 port map (A=> A, B=> B, OP=>OP, 
            N => N, Y => Y);

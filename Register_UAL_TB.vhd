@@ -14,7 +14,7 @@ type table is array(15 downto 0) of std_logic_vector(31 downto 0);
 	SIGNAL	   OP : STD_LOGIC_VECTOR(1 DOWNTO 0) := "11";
 	SIGNAL	   N : STD_LOGIC;
 
-begin	
+begin
 
 	process
 	begin
@@ -29,8 +29,8 @@ begin
 		WE <= '0';
 		RA <= "0001";
 		OP <= "00";
-		
-		
+
+
 		CLK <= '0';
 		--step2 setup W bus
 		wait for 10 ns;
@@ -45,18 +45,18 @@ begin
 		--Write (R2) = R(1) + R(15)
 		wait for 10 ns;
 		CLK <= '0';
-		
+
 		RW <= "0011";
 		OP <= "10";
-		
+
 		wait for 10 ns;
 		CLK <= '1';
 		--Write (R3) = R(1) - R(15)
-		
+
 		wait for 10 ns;
-		
+
 		CLK <= '0';
-		
+
 		RW <= "0101";
 		RA <= "0111";
 		OP <= "10";

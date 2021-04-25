@@ -9,7 +9,7 @@ port ( A : in STD_LOGIC_VECTOR(31 DOWNTO 0) := X"00000000";
 	   N : out std_logic := '0';
 	   Y : out std_logic_vector (31 downto 0):= X"00000000");
 end entity;
-		
+
 architecture dataflow of UAL is
 begin
 	N <= '0';
